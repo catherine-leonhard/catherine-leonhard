@@ -1,0 +1,488 @@
+/*Mobile first*/
+/* import google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100..700&display=swap');
+
+
+:root {
+    /* Set up the basic color and font styles */
+    /* Colors: */
+    --accent-white: white;
+    --accent: #141313;
+    --bg-light: white;
+    --bg-dark: #111;
+    --heading-text-color:black;
+    --body-text-color:black;
+    --link-hover:#B2B1AE;
+     
+    /* Font/text values */
+
+    /*    font-family, find the values from google fonts website*/
+    --headings-font-family:'Josefin Sans', sans-serif;
+    --subheadings-font-family:'Poppins', sans-serif;
+    --body-font-family:'Poppins', sans-serif;
+
+}
+
+
+/* FONTS AND HEADINGS */
+body {
+    background-color:var(--bg-light);
+    font-family: var(--body-font-family);
+    color: var(--body-text-color);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+/*this is a group selection, selecting all the headlines h1-h4 and set a standard style*/
+h1, 
+h2,
+h3,
+h4 {
+    color: var(--heading-text-color);
+    line-height: 1.5;
+}
+
+/*Set a unique style to a specific tag element*/
+h1 {
+    font-family: var(--headings-font-family);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: var(--headings-font-family);
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: var(--headings-font-family);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-family: var(--headings-font-family);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* BACKGROUNDS */
+.bg-dark {
+    color: var(--accent-white) !important; 
+    background-color: var(--accent) !important;
+}
+
+.bg-dark h1 {
+    color: var(--accent-white);
+}
+
+
+/* CONTAINERS */
+.container {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-padded {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.img-container {
+    background-color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* center */
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* LINKS*/
+a {
+    color: var(--body-text-color) !important;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+a button {
+    padding: 10px;
+}
+
+a button:hover {
+    padding: 10px;
+}
+
+.demo {
+    text-decoration: none;
+    padding-left: 5px;
+    display: inline;
+}
+
+/* BUTTONS */
+button {
+    color: var(--accent-white);
+    background-color: var(--accent);
+    padding: 10px;
+    margin-top: 2%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+button:hover {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    background-color: var(--accent-white);
+}
+
+
+/* IMAGES */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-ratio-1-1 {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-ratio-5-4 {
+    aspect-ratio: 5/4;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.height-200 {
+    max-height: 200px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.height-500 {
+    max-height: 500px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.full-width {
+    width: 100%;
+    height: auto;
+}
+
+.headshot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 100%;
+}
+
+.cover {
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.shadow {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.artwork {
+    max-height: 80vh;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+
+/* SPACERS */
+.spacer {
+    height: 1.5rem;
+}
+
+.solid-spacer {
+    height: 0.25rem;
+    background-color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+
+/* HEADING ELEMENTS */
+/* header */
+header {
+    margin-bottom: 2%;
+}
+
+/* name */
+.name {
+    font: var(--headings-font-family);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.name a {
+    text-decoration: none;
+}
+
+/* TOP NAVIGATION */
+#top-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.topnav {
+    border: none;
+    color: var(--accent);
+    background-color: var(--accent-white);
+    padding: 0.5%;
+    margin-left: 0.5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.topnav:hover {
+    color: var(--accent-white) !important;
+    background-color: var(--accent);
+}
+
+.active {
+    border: 2px solid var(--accent);
+}
+
+/* FOOTER ELEMENTS */
+/* footer */
+footer {
+    color: var(--accent);
+    font-size: smaller;
+    margin-top: 2%;
+}
+
+p.footer-text {
+    font-size: 0.75rem;
+}
+
+.social {
+    color: var(--accent);
+    padding-right: 1%;
+}
+
+
+/* HOME PAGE */
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#intro h1 {
+    font-size: 5vw;
+}
+
+#intro p {
+    font-size: smaller;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.intro-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* PROJECTS */
+.overlay {
+    width: 100vw;
+    min-height: 100vh;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-light);
+    display: none;
+}
+
+.exit-button {
+    display: flex;
+    justify-content: right;
+    padding: 2%;
+}
+
+i.close-project:hover {
+    cursor: pointer;
+}
+
+/* ARTWORK */
+#artwork {
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-style: italic;
+}
+
+/*screen that is larger than the mobile view, Large Screen*/
+@media only screen and (max-width: 480px) {
+    body {
+        background-color:var(--bg);
+        font-family: var(--body-font-family);
+        font-size: 1rem;
+        /*    line-height is 150% of the font size*/
+        line-height: 1.5rem;
+        color: var(--body-text-color);
+    }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.3rem;
+    }
+
+    /* footer */
+    footer {
+        font-size: smaller;
+        padding-top: 100px;
+        vertical-align: middle;
+    }
+
+    p.footer-text {
+        font-size: 0.5rem;
+        vertical-align: middle;
+    }
+
+    /* header styles */
+    h1,
+    h2,
+    h3 {
+        color: var(--heading-text-color);
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    
+    /*Set a unique style to a specific tag element*/
+    h1 {
+        font-family: var(--headings-font-family);
+        /* margin-top: 0; */
+        font-size: 42px;
+    }
+    
+    h2 {
+        font-family: var(--headings-font-family);
+        /* margin-top: 0; */
+        font-size: 30px;
+        padding: 0.938rem;
+    }
+    
+    h3 {
+        font-family: var(--subheadings-font-family);
+        font-size: 16px;
+    }
+    
+    .topnav {
+        background-color: var(--bg-accent);
+        font-weight:600;
+    }
+
+    .topnav a.active {
+        color: var(--bg-accent);
+    }
+    
+
+    .topnav-brand a {
+        display: flex;
+    }
+    
+    .topnav-right a {
+        display: none;
+    }
+    .topnav-right a:not(.icon){
+        background-color: var(--accent-white);
+    }
+
+    .topnav a.icon {
+      float: right;
+      display: block;
+      color: var(--accent-white);
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive a.icon {
+        float: right;
+        color: black;
+    }   
+
+    /* HOME PAGE */
+    #intro {
+        min-height: 500px;
+    }
+
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+}
