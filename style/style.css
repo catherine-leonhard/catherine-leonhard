@@ -239,10 +239,11 @@ img {
 }
 
 .artwork {
-    max-height: 80vh;
+    max-height: 75vh;
     height: auto;
     width: auto;
     max-width: 100%;
+    margin-bottom: 1rem;
 }
 
 
@@ -374,12 +375,12 @@ i.close-project:hover {
 }
 
 /* ARTWORK */
-#artwork {
+#gallery {
     display: flex;
     flex-wrap: wrap;
 }
 
-#artwork > .cover {
+#gallery > .cover {
     margin: 10px;
 }
 
@@ -393,8 +394,9 @@ i.close-project:hover {
     margin-bottom: 1rem;
 }
 
-.tag {
+.title {
     font-style: italic;
+    font-weight: bold;
 }
 
 /*screen that is larger than the mobile view, Large Screen*/

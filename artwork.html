@@ -38,19 +38,21 @@
         <h1>Artwork</h1>
 
         <div class="row">
-            <div class="col-sm-2 container">
+            <!-- SIDEBAR -->
+            <div class="col-md-2 container">
                 <div id="sidebar">
                     <a href="#graphic-design"><button class="sidenav">Graphic Design</button></a>
                     <a href="#photography"><button class="sidenav">Photography</button></a>
                     <a href="#drawing"><button class="sidenav">Drawing</button></a>
-
+                    <a href="#multimedia"><button class="sidenav">Multimedia</button></a>
                 </div>
             </div>
-            <div class="col-sm-10">
-                <!-- ARTWORK -->
+            <!-- ARTWORK -->
+            <div class="col-md-10">
+                <!-- GRAPHIC DESIGN -->
                 <div id="graphic-design" class="container">
                     <h2>Graphic Design</h2>
-                    <div id="artwork" class="flex-container">
+                    <div id="gallery" class="flex-container">
                         <div id="mamma-mia" class="cover open-project">
                             <img class="height-250" src="src/artwork/mamma_mia.png" alt="">
                         </div>
@@ -62,34 +64,51 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- PHOTOGRAPHY -->
                 <div id="photography" class="container">
                     <h2>Photography</h2>
-                    <!-- <div id="artwork" class="flex-container">
-                        <div id="mamma-mia" class="cover open-project">
-                            <img class="height-250" src="src/artwork/mamma_mia.png" alt="">
+                    <div id="gallery" class="flex-container">
+                        <div id="russell" class="cover open-project">
+                            <img class="height-250" src="src/artwork/russell-1.jpg" alt="">
                         </div>
-                        <div id="capsize" class="cover open-project">
-                            <img class="height-250" src="src/artwork/capsize.jpg" alt="">
+                        <div id="milady" class="cover open-project">
+                            <img class="height-250" src="src/artwork/milady.JPG" alt="">
                         </div>
-                        <div id="naias" class="cover open-project">
-                            <img class="height-250" src="src/artwork/naias.jpg" alt="">
+                        <div id="dock" class="cover open-project">
+                            <img class="height-250" src="src/artwork/dock.jpg" alt="">
                         </div>
-                        <div id="candy" class="cover open-project">
-                            <img class="height-250" src="src/artwork/color_pastel_candy.jpg" alt="">
+                        <div id="owl" class="cover open-project">
+                            <img class="height-250" src="src/artwork/owl.jpg" alt="">
                         </div>
-                        <div id="gourds" class="cover open-project">
-                            <img class="height-250" src="src/artwork/charcoal_gourds.jpg" alt="">
-                        </div>
-                    </div> -->
+                    </div>
                 </div>
+
+                <!-- DRAWING -->
                 <div id="drawing" class="container">
                     <h2>Drawing</h2>
-                    <div id="artwork" class="flex-container">
+                    <div id="gallery" class="flex-container">
+                        <div id="texture" class="cover open-project">
+                            <img class="height-250" src="src/artwork/texture.jpg" alt="">
+                        </div>
                         <div id="candy" class="cover open-project">
-                            <img class="height-250" src="src/artwork/color_pastel_candy.jpg" alt="">
+                            <img class="height-250" src="src/artwork/candy.jpg" alt="">
                         </div>
                         <div id="gourds" class="cover open-project">
-                            <img class="height-250" src="src/artwork/charcoal_gourds.jpg" alt="">
+                            <img class="height-250" src="src/artwork/gourds.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MULTIMEDIA -->
+                <div id="multimedia" class="container">
+                    <h2>Multimedia</h2>
+                    <div id="gallery" class="flex-container">
+                        <div id="vpc" class="cover open-project">
+                            <img class="height-250" src="src/artwork/vpc.jpg" alt="">
+                        </div>
+                        <div id="letterforms" class="cover open-project">
+                            <img class="height-250" src="src/artwork/letterforms.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -105,6 +124,7 @@
         </div>
         <div class="container">
             <img class="artwork shadow" src="src/artwork/mamma_mia.png" alt="">
+            <p><span class="title">Mamma Mia Poster</span>, 2023</p>
         </div>
     </div>
 
@@ -115,6 +135,9 @@
         </div>
         <div class="container">
             <img class="artwork shadow" src="src/artwork/capsize.jpg" alt="">
+            <p><span class="title">Capsize Album Cover</span>, 2020<br>
+                Scholastic Art & Writing Awards, Silver Key Recipient
+            </p>
         </div>
     </div>
 
@@ -125,26 +148,131 @@
         </div>
         <div class="container">
             <img class="artwork shadow" src="src/artwork/naias.jpg" alt="">
+            <p><span class="title">North American International Auto Show Poster</span>, 2019<br>
+                NAIAS Poster Contest, 2nd place, 11th grade
+            </p>
         </div>
     </div>
 
-    <!-- PASTEL CANDY -->
+    <!-- RUSSELL -->
+    <div id="russell" class="overlay">
+        <div class="exit-button">
+            <i class="fa fa-times fa-lg close-project"></i>
+        </div>
+        <div class="container">
+            <div class="flex-container">
+                <div class="container-fluid"><img class="artwork shadow" src="src/artwork/russell-1.jpg" alt=""></div>
+                <div class="container-fluid"><img class="artwork shadow" src="src/artwork/russell-2.jpg" alt=""></div>
+                <div class="container-fluid"><img class="artwork shadow" src="src/artwork/russell-3.jpg" alt=""></div>
+            </div>
+            <p><span class="title">Russell</span>, 2023</p>
+        </div>
+    </div>
+
+    <!-- MILADY -->
+    <div id="milady" class="overlay">
+        <div class="exit-button">
+            <i class="fa fa-times fa-lg close-project"></i>
+        </div>
+        <div class="container">
+            <img class="artwork shadow" src="src/artwork/milady.JPG" alt="">
+            <p><span class="title">Milady</span>, 2022</p>
+        </div>
+    </div>
+
+    <!-- DOCK -->
+    <div id="dock" class="overlay">
+        <div class="exit-button">
+            <i class="fa fa-times fa-lg close-project"></i>
+        </div>
+        <div class="container">
+            <img class="artwork shadow" src="src/artwork/dock.jpg" alt="">
+            <p><span class="title">Lake Sixteen</span>, 2020</p>
+        </div>
+    </div>
+
+    <!-- OWL -->
+    <div id="owl" class="overlay">
+        <div class="exit-button">
+            <i class="fa fa-times fa-lg close-project"></i>
+        </div>
+        <div class="container">
+            <img class="artwork shadow" src="src/artwork/owl.jpg" alt="">
+            <p><span class="title">Bird of Prey</span>, 2019</p>
+        </div>
+    </div>
+
+    <!-- TEXTURE -->
+    <div id="texture" class="overlay">
+        <div class="exit-button">
+            <i class="fa fa-times fa-lg close-project"></i>
+        </div>
+        <div class="container">
+            <img class="artwork shadow" src="src/artwork/texture.jpg" alt="">
+            <p><span class="title">Texture</span>, 2022<br>
+                Ink, micron pen
+            </p>
+        </div>
+    </div>
+
+    <!-- CANDY -->
     <div id="candy" class="overlay">
         <div class="exit-button">
             <i class="fa fa-times fa-lg close-project"></i>
         </div>
         <div class="container">
-            <img class="artwork shadow" src="src/artwork/color_pastel_candy.jpg" alt="">
+            <img class="artwork shadow" src="src/artwork/candy.jpg" alt="">
+            <p><span class="title">Candy</span>, 2017<br>
+                Color pastel
+            </p>
         </div>
     </div>
 
-    <!-- CHARCOAL GOURDS -->
+    <!-- GOURDS -->
     <div id="gourds" class="overlay">
         <div class="exit-button">
             <i class="fa fa-times fa-lg close-project"></i>
         </div>
         <div class="container">
-            <img class="artwork shadow" src="src/artwork/charcoal_gourds.jpg" alt="">
+            <img class="artwork shadow" src="src/artwork/gourds.jpg" alt="">
+            <p><span class="title">Candy</span>, 2017<br>
+                Charcoal
+            </p>
+        </div>
+    </div>
+
+    <!-- VPC -->
+    <div id="vpc" class="overlay">
+        <div class="exit-button">
+            <i class="fa fa-times fa-lg close-project"></i>
+        </div>
+        <div class="container flex-container">
+            <img class="artwork shadow" src="src/artwork/value.jpg" alt="">
+            <p><span class="title">Value Photograph</span>, 2017<br>
+                Charcoal
+            </p>
+            <img class="artwork shadow" src="src/artwork/pattern.jpg" alt="">
+            <p><span class="title">Candy</span>, 2017<br>
+                Charcoal
+            </p>
+            <img class="artwork shadow" src="src/artwork/arb-color.jpg" alt="">
+            <p><span class="title">Candy</span>, 2017<br>
+                Charcoal
+            </p>
+        </div>
+    </div>
+
+    <!-- LETTERFORMS -->
+    <div id="letterforms" class="overlay">
+        <div class="exit-button">
+            <i class="fa fa-times fa-lg close-project"></i>
+        </div>
+        <div class="container">
+            <img class="artwork shadow" src="src/artwork/letterforms.jpg" alt="">
+            <p><span class="title">Candy</span>, 2017<br>
+                Charcoal
+            </p>
+            
         </div>
     </div>
 </body>
