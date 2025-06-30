@@ -219,6 +219,7 @@ img {
     background-color: black;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1rem;
 }
 
 .cover img:hover {
