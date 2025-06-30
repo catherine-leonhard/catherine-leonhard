@@ -195,6 +195,13 @@ img {
     max-width: 100%;
 }
 
+.height-250 {
+    max-height: 250px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
 .height-500 {
     max-height: 500px;
     height: auto;
@@ -368,7 +375,22 @@ i.close-project:hover {
 
 /* ARTWORK */
 #artwork {
+    display: flex;
     flex-wrap: wrap;
+}
+
+#artwork > .cover {
+    margin: 10px;
+}
+
+#sidebar {
+    position: sticky;
+    top: 5vh;
+}
+
+.sidenav {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .tag {
