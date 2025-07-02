@@ -116,6 +116,13 @@ h4 {
     margin: 0;
 }
 
+.art-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* center */
 .center {
     justify-content: center;
