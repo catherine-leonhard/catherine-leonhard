@@ -373,6 +373,12 @@ p.footer-text {
     overflow-y: auto;
 }
 
+.no-scroll {
+    position: fixed;
+    width: 100%;
+    overflow-y: hidden;
+}
+
 .exit-button {
     display: flex;
     justify-content: right;
