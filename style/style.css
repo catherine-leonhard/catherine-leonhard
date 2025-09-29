@@ -362,13 +362,19 @@ p.footer-text {
 /* PROJECTS */
 .overlay {
     width: 100vw;
-    min-height: 100vh;
     max-width: 100%;
-    position: absolute;
+    min-height: 100vh;
+    height: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: var(--bg-light);
     display: none;
+    overflow-y: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .exit-button {
