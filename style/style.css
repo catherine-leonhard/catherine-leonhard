@@ -27,7 +27,7 @@ body {
     background-color:var(--bg-light);
     font-family: var(--body-font-family);
     color: var(--body-text-color);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 /* FONTS AND HEADINGS */
