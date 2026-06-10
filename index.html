@@ -2,89 +2,123 @@
 <html>
 
 <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio containing personal and school work" />
-    <meta name="keywords" content="Catherine Leonhard, STAMPS, portfolio" />
-    <meta name="author" content="Catherine Leonhard" /> -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Catherine Leonhard's portfolio website showcasing her work.">
+    <meta name="keywords" content="Catherine Leonhard, portfolio, graphic design, web design,photography">
+    <meta name="author" content="Catherine Leonhard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
     <!-- JS -->
     <script src='scripts/jquery.min.js'></script>
     <script src='scripts/page.js'></script>
+
+    <!-- Bootstrap Core CSS ––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <!-- Bootstrap Core CSS ––––––––––––––––––––––––––– -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!-- Fontawesome Icons -->
-    <script src="https://kit.fontawesome.com/53deec75bf.js" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/53deec75bf.js" crossorigin="anonymous"></script>
+</head>
 
 <header>
-    <div class="name">
-        <a href="index.html">CATHERINE LEONHARD</a>
-    </div>
-
-    <div id="top-menu">
-        <a class="topnav active" href="index.html">Home</a>
-        <a class="topnav" href="projects.html">Projects</a>
-        <a class="topnav" href="artwork.html">Artwork</a>
+    <div id="intro" class="gradient container-fluid">
+        <div class="top-menu">
+            <a id="name" href="index.html">Catherine Leonhard</a>
+            <div id="top-nav">
+                <a href="javascript:void(0);" class="icon">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div id="nav-items">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="artwork.html">Artwork</a>
+                </div>
+            </div>
+        </div>
+        <div id="intro-content">
+            <div class="intro-words">
+                <h1>DIGITAL DESIGNER</h1>
+                <h2>Creativity. Strategy. Exploration.</h2>
+            </div>
+            <div class="headshot">
+                <img src="src/headshot.jpeg" alt="">
+            </div>
+        </div>
     </div>
 </header>
 
+
 <body>
-    <!-- INTRO -->
-    <div id="intro" class="bg-dark container-fluid">
-        <div class="container-padded center">
-            <div class="row">
-                <div class="col-sm-4">
-                    <img class="headshot" src="src/headshot.jpeg" alt="profile picture">
-                </div>
-                <div class="col-sm-8">
-                    <div class="intro-content">
-                        <h1>CATHERINE LEONHARD</h1>
-                        <p>(she, her)</p>
-                    </div>
-                </div>
-            </div>
+    <!-- SPLASH SCREEN -->
+    <div id="splash" class="gradient">
+        <div class="splash-content">
+            <h1>Hello! My name is Catherine.</h1>
+            <p>Welcome to my portfolio!</p>
         </div>
     </div>
 
     <!-- ABOUT -->
-    <div id="about" class="container-padded">
-        <h3>About Me</h3>
-        <p>I am an aspiring graphic and web desginer located in Ann Arbor, MI. I graduated in May 
-            2025 from the University of Michigan Penny W. STAMPS School of Art & Design with a 
-            Bachelor's of Fine Arts and a minor in Computer Science. My professional 
-            interests include graphic design, UI/UX design, and photography. I currently work at the 
-            Michigan Institute for Data & AI in Society as a Communications Assistant. My main 
-            responsibilities include maintaining the institute's website and creating print and 
-            digital materials for marketing and events.
-            
-            In my free time you can find me listening to music, traveling, or running at a track nearby.
-        </p>
-        <p>If you want to connect, feel free to email me at 
-            <a href="mailto:catherinerleonhard@gmail.com">catherinerleonhard@gmail.com</a>
-        </p>
+    <div class="container-padded flex-container">
+        <div class="col-6">
+            <img src="src/waterfall.jpg" alt="">
+        </div>
 
-        <div class="flex-container center">
-            <a href="src/Leonhard_Master.pdf" target="_blank"><button>RESUME</button></a>
+        <div id="about col-6">
+            <h1>About Me</h1>
+            <p>
+                I am a graphic and digital marketing designer based in Ann Arbor, MI. I completed my
+                Bachelor's of Fine Arts and minor in Computer Science from the University of Michigan
+                with a concentration in graphic and web design. Currently, I work as a Communications
+                Assistant at the Michigan Institute for Data & AI in Society where I am responsible
+                for maintaining the institute's websites, designing print and digital marketing
+                materials, and assisting with our various events. I'm passionate about all things 
+                design and believe that it is what brings a company to life. I'm always looking to 
+                expand my skills and knowledge to create exciting and fresh ideas.
+            </p>
+
+            <hr>
+
+            <h2>Skills</h2>
+            <div id="skills" class="flex-container">
+                <div class="col-6">
+                    <h3>Design & Development</h3>
+                    <ul>
+                        <li>Adobe Creative Cloud (Illustrator, Photoshop, InDesign, XD)</li>
+                        <li>Canva</li>
+                        <li>Figma</li>
+                        <li>Microsoft Office (Word, Powerpoint, Excel)</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <h3>Professional</h3>
+                    <ul>
+                        <li>Visual Storytelling</li>
+                        <li>Data Management & Organization</li>
+                        <li>Teamwork & Collaboration</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            
+            <h2>Let's Connect!</h2>
+            <p>Feel free to send me an email at
+                <a href="mailto:catherinerleonhard@gmail.com">catherinerleonhard@gmail.com</a>.
+            </p>
+            <a href="src/Leonhard_Master.pdf" target="_blank"><button>VIEW RESUME</button></a>
         </div>
     </div>
+
 </body>
 
 <footer>
-    <div class="solid-spacer"></div>
-
-    <div class="flex-container center">
-        <a class="social" href="mailto:catherinerleonhard@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i></a>
-        <a class="social" href="https://www.linkedin.com/in/catherine-leonhard/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-    </div>
-
-    <div class="spacer"></div>
-
-    <div class="flex-container center">
-        <p class="footer-text">Copyright © 2024 Catherine Leonhard. All rights reserved.</p>
+    <div class="gradient footer-content">
+        <div class="social">
+            <a href="mailto:catherinerleonhard@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i></a>
+            <a href="https://www.linkedin.com/in/catherine-leonhard/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        </div>
+        <p class="footer-text">Copyright © 2026 Catherine Leonhard. All rights reserved.</p>
     </div>
 </footer>
 
