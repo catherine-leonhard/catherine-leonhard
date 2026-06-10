@@ -27,7 +27,7 @@ body {
     background-color:var(--bg-light);
     font-family: var(--body-font-family);
     color: var(--body-text-color);
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 /* FONTS AND HEADINGS */
@@ -593,6 +593,10 @@ i.close-project:hover {
     
     .container-padded {
         padding: 1rem;
+    }
+
+    #splash {
+        cursor: pointer;
     }
 
     /* splash screen */
