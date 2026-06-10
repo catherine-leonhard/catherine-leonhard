@@ -342,6 +342,7 @@ footer p {
     color: white;
     cursor: pointer;
     position: fixed;
+    z-index: 999;
     display: flex;
     top: 0;
     left: 0;
