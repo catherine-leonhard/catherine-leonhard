@@ -92,13 +92,11 @@ li {
 }
 
 .container-padded {
-    padding: 2em 0rem;
-    margin: 0rem 8rem;
+    padding: 2em 4rem;
 }
 
-.flex-container {
-    display: flex;
-    gap: 2rem;
+.row {
+    margin: 0;
 }
 
 .img-container {
@@ -165,9 +163,7 @@ a button:hover {
 
 /* IMAGES */
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin:auto;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -180,32 +176,8 @@ img {
     object-fit: cover;
 }
 
-.img-ratio-5-4 {
-    aspect-ratio: 5/4;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.height-200 {
-    max-height: 200px;
-    height: auto;
-    width: auto;
-    max-width: 100%;
-}
-
-.height-250 {
-    max-height: 250px;
-    height: auto;
-    width: auto;
-    max-width: 100%;
-}
-
-.height-500 {
-    max-height: 500px;
-    height: auto;
-    width: auto;
-    max-width: 100%;
+img.ratio-5-7 {
+    aspect-ratio: 5 / 7;
 }
 
 .full-width {
@@ -468,11 +440,10 @@ footer p {
     overflow: hidden;       /* Hides the parts of the image that fall outside the arch */
     border-radius: 9999px 9999px 0 0;
     box-shadow: 20px 20px 0px 0px #05174d;
-
 }
 
-#skills {
-    gap: 1rem;
+#skills > .col-lg-6 {
+    padding: 0;
 }
 
 #facts {
@@ -541,7 +512,7 @@ i.close-project:hover {
 /* tablet */
 @media only screen and (min-width:480px) and (max-width: 768px) {
     .container-padded {
-        margin: 0rem 4rem;
+        padding: 1rem 2rem;
     }
 
     #name {
@@ -552,7 +523,6 @@ i.close-project:hover {
         min-width: 100px;
         padding: 5px 10px;
     }
-
 
     #intro {
         padding: 2rem;
@@ -611,18 +581,17 @@ i.close-project:hover {
         margin-bottom: 1.3rem;
     }
 
+    .row {
+        gap: 1rem;
+    }
+
     /* footer */
     p.footer-text {
         vertical-align: middle;
     }
     
-    .flex-container {
-        flex-direction: column;
-    }
-
     .container-padded {
-        padding: 2rem 0rem;
-        margin: 0rem 2rem;
+        padding: 1rem;
     }
 
     /* TOP NAVIGATION */
@@ -647,9 +616,16 @@ i.close-project:hover {
         display: none;
         flex-direction: column;
         position: absolute;
+        z-index: 999;
         top: 4rem;
         right: 1rem;
         animation: 1.5s fade-in-right;
+        background-color: #05174d;
+        padding: 1rem;
+    }
+
+    #header {
+        padding: 1rem;
     }
 
     #intro {
@@ -679,17 +655,21 @@ i.close-project:hover {
     }
 
     .headshot {
-        height: 1000px;
         width: auto;
         aspect-ratio: 5 / 7;
         overflow: hidden;       /* Hides the parts of the image that fall outside the arch */
         border-radius: 9999px 9999px 0 0;
+        box-shadow: 10px 10px 0px 0px #05174d;
     }
 
     .headshot img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .waterfall img {
+        width:100%;
     }
 
 }

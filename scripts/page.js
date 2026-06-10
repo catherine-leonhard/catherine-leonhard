@@ -3,6 +3,7 @@ let scroll_position = 0;
 
 $(document).ready(function () {
 
+  // SPLASH SCREEN
   if (sessionStorage.getItem('splashSeen')) {
       $('#splash').hide();
   } 
@@ -13,13 +14,13 @@ $(document).ready(function () {
       $(this).fadeOut('slow');
       $('body').css('overflow', 'auto');  // re-enable scrolling
     })
-}
+  }
 
-  // SPLASH SCREEN
   $('#splash').click(function() {
     $(this).fadeOut('slow');
   })
 
+  // TOP NAV
   $('#top-nav .icon').click(function() {
     if ($("#nav-items").css('display') === 'none') {
       $("#nav-items").css({
@@ -35,6 +36,11 @@ $(document).ready(function () {
 
   // SHOW/HIDE PROJECT OVERLAYS
   $('.open-project').click(function() {
+    if ($("#nav-items").css('display') === 'flex') {
+      $("#nav-items").css({
+        "display": "none",
+      });    
+    }
     project_id = $(this).attr('id');
     scroll_position = $(window).scrollTop();
     $("#art").addClass("no-scroll").css({
