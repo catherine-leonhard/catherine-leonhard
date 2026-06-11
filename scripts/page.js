@@ -9,11 +9,13 @@ $(document).ready(function () {
   } 
   else {
     $('body').css('overflow-y', 'hidden');  // disable scrolling
+    console.log ("scrolling disabled");
     sessionStorage.setItem('splashSeen', 'true');
 
     $('#splash').click(function() {
       $(this).fadeOut('slow');
       $('body').css('overflow-y', 'auto');  // re-enable scrolling
+      console.log("scrolling re-enabled");
     })
   }
 
