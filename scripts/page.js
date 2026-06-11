@@ -19,10 +19,6 @@ $(document).ready(function () {
     })
   }
 
-  $('#splash').click(function() {
-    $(this).fadeOut('slow');
-  })
-
   // TOP NAV
   $('#top-nav .icon').click(function() {
     if ($("#nav-items").css('display') === 'none') {
