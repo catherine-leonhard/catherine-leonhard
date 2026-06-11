@@ -8,12 +8,12 @@ $(document).ready(function () {
     $('#splash').hide();
   } 
   else {
-    $('body').css('overflow', 'hidden');  // disable scrolling
+    $('body').css('overflow-y', 'hidden');  // disable scrolling
     sessionStorage.setItem('splashSeen', 'true');
 
     $('#splash').click(function() {
       $(this).fadeOut('slow');
-      $('body').css('overflow', 'auto');  // re-enable scrolling
+      $('body').css('overflow-y', 'auto');  // re-enable scrolling
     })
   }
 
