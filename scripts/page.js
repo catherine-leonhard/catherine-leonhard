@@ -5,9 +5,10 @@ $(document).ready(function () {
 
   // SPLASH SCREEN
   if (sessionStorage.getItem('splashSeen')) {
-      $('#splash').hide();
+    $('#splash').hide();
   } 
   else {
+    $('body').css('overflow', 'hidden');  // disable scrolling
     sessionStorage.setItem('splashSeen', 'true');
 
     $('#splash').click(function() {
