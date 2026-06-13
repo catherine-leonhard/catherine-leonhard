@@ -7,16 +7,17 @@
     <meta name="keywords" content="Catherine Leonhard, portfolio, graphic design, web design,photography">
     <meta name="author" content="Catherine Leonhard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Artwork</title>
 
     <!-- JS -->
     <script src='scripts/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src='scripts/page.js'></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style/style.css">
     <!-- Bootstrap Core CSS ––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
     <!-- Fontawesome Icons -->
     <script src="https://kit.fontawesome.com/53deec75bf.js" crossorigin="anonymous"></script>
 </head>
@@ -43,286 +44,84 @@
     <div id="art" class="container-padded" >
         <h1>Artwork</h1>
 
-        <div class="row">
-            <!-- SIDEBAR -->
-            <div class="col-md-2 container">
-                <div id="sidebar">
-                    <a href="#graphic-design"><button class="sidenav">Graphic Design</button></a>
-                    <a href="#photography"><button class="sidenav">Photography</button></a>
-                    <a href="#drawing"><button class="sidenav">Drawing</button></a>
-                    <a href="#multimedia"><button class="sidenav">Multimedia</button></a>
+        <div id="gallery">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="0" data-id="art-carousel" src="src/artwork/artifacts.png" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="1" data-id="art-carousel" src="src/artwork/candy.jpg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="2" data-id="art-carousel" src="src/artwork/capsize.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="3" data-id="art-carousel" src="src/artwork/mamma_mia.png" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="3" data-id="art-carousel" src="src/artwork/dock-2.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="1" data-id="art-carousel" src="src/artwork/letterforms.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="3" data-id="art-carousel" src="src/artwork/owl.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="1" data-id="art-carousel" src="src/artwork/mrun_2022.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="0" data-id="art-carousel" src="src/artwork/gourds.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="2" data-id="art-carousel" src="src/artwork/lo_2021.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="0" data-id="art-carousel" src="src/artwork/russell-1.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="2" data-id="art-carousel" src="src/artwork/naias.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="2" data-id="art-carousel" src="src/artwork/texture.jpeg" alt="">
+            <img class="open" data-bs-target="#demo" data-bs-slide-to="0" data-id="art-carousel" src="src/artwork/milady.jpeg" alt="">
+        </div>
+
+
+    </div>
+
+    <div id="art-carousel">
+        <div id="demo" class="carousel slide" data-bs-ride="false">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="indicator active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="indicator"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="indicator"></button>
+        </div>
+        
+        <div class="exit-button">
+            <button type="button" class="close" data-id="art-carousel"><i class="fa fa-times fa-lg"></i></button>
+        </div>
+
+       <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-img">
+                    <img src="src/squirrel.jpg" alt="Los Angeles" class="d-block">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                    <p>We had such a great time in LA!</p>
                 </div>
             </div>
-            <!-- ARTWORK -->
-            <div class="col-md-10">
-                <!-- GRAPHIC DESIGN -->
-                <div id="graphic-design" class="container">
-                    <h2>Graphic Design</h2>
-                    <div id="gallery" class="flex-container">
-                        <div id="mamma-mia" class="cover open-project">
-                            <img class="height-250" src="src/artwork/mamma_mia.png" alt="">
-                        </div>
-                        <div id="mrun-2022" class="cover open-project">
-                            <img class="height-250" src="src/artwork/mrun_2022.jpeg" alt="">
-                        </div>
-                        <div id="lo-2021" class="cover open-project">
-                            <img class="height-250" src="src/artwork/lo_2021.jpeg" alt="">
-                        </div>
-                        <div id="capsize" class="cover open-project">
-                            <img class="height-250" src="src/artwork/capsize.jpeg" alt="">
-                        </div>
-                        <div id="naias" class="cover open-project">
-                            <img class="height-250" src="src/artwork/naias.jpeg" alt="">
-                        </div>
-                    </div>
+            <div class="carousel-item">
+                <div class="carousel-img">
+                    <img src="src/waterfall.jpg" alt="Chicago" class="d-block">
                 </div>
-
-                <!-- PHOTOGRAPHY -->
-                <div id="photography" class="container">
-                    <h2>Photography</h2>
-                    <div id="gallery" class="flex-container">
-                        <div id="russell" class="cover open-project">
-                            <img class="height-250" src="src/artwork/russell-1.jpeg" alt="">
-                        </div>
-                        <div id="milady" class="cover open-project">
-                            <img class="height-250" src="src/artwork/milady.jpeg" alt="">
-                        </div>
-                        <div id="dock" class="cover open-project">
-                            <img class="height-250" src="src/artwork/dock-1.jpeg" alt="">
-                        </div>
-                        <div id="owl" class="cover open-project">
-                            <img class="height-250" src="src/artwork/owl.jpeg" alt="">
-                        </div>
-                    </div>
+                <div class="carousel-caption">
+                    <h3>Chicago</h3>
+                    <p>Thank you, Chicago!</p>
+                </div> 
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-img">
+                    <div><img src="src/artwork/dock-1.jpeg" alt="New York" class="d-block"></div>
+                    <div><img src="src/artwork/dock-1.jpeg" alt="New York" class="d-block"></div>
+                    <div><img src="src/artwork/dock-1.jpeg" alt="New York" class="d-block"></div>
                 </div>
-
-                <!-- DRAWING -->
-                <div id="drawing" class="container">
-                    <h2>Drawing</h2>
-                    <div id="gallery" class="flex-container">
-                        <div id="texture" class="cover open-project">
-                            <img class="height-250" src="src/artwork/texture.jpeg" alt="">
-                        </div>
-                        <div id="artifacts" class="cover open-project">
-                            <img class="height-250" src="src/artwork/artifacts.png" alt="">
-                        </div>
-                        <div id="candy" class="cover open-project">
-                            <img class="height-250" src="src/artwork/candy.jpg" alt="">
-                        </div>
-                        <div id="gourds" class="cover open-project">
-                            <img class="height-250" src="src/artwork/gourds.jpeg" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MULTIMEDIA -->
-                <div id="multimedia" class="container">
-                    <h2>Multimedia</h2>
-                    <div id="gallery" class="flex-container">
-                        <div id="vpc" class="cover open-project">
-                            <img class="height-250" src="src/artwork/value.jpeg" alt="">
-                        </div>
-                        <div id="letterforms" class="cover open-project">
-                            <img class="height-250" src="src/artwork/letterforms.jpeg" alt="">
-                        </div>
-                    </div>
-                </div>
+                <div class="carousel-caption">
+                    <h3>New York</h3>
+                    <p>We love the Big Apple!</p>
+                </div>  
             </div>
         </div>
+        
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        </div>
 
     </div>
 
-    <!-- MAMMA MIA POSTER -->
-    <div id="mamma-mia" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/mamma_mia.png" alt="">
-            <p><span class="title">Mamma Mia Poster</span>, 2023</p>
-        </div>
-    </div>
-
-    <!-- MRUN SHIRT 2022 -->
-    <div id="mrun-2022" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/mrun_2022.jpeg" alt="">
-            <p><span class="title">Michigan Running Club Shirt</span>, 2022</p>
-        </div>
-    </div>
-
-    <!-- LAKE ORION SHIRT 2021 -->
-    <div id="lo-2021" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/lo_2021.jpeg" alt="">
-            <p><span class="title">Lake Orion Summer Track Shirt</span>, 2021</p>
-        </div>
-    </div>
-    
-    <!-- CAPSIZE -->
-    <div id="capsize" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/capsize.jpeg" alt="">
-            <p><span class="title">Capsize Album Cover</span>, 2020<br>
-                Scholastic Art & Writing Awards, Silver Key Recipient
-            </p>
-        </div>
-    </div>
-
-    <!-- NAIAS POSTER -->
-    <div id="naias" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/naias.jpeg" alt="">
-            <p><span class="title">North American International Auto Show Poster</span>, 2019<br>
-                NAIAS Poster Contest, 2nd place, 11th grade
-            </p>
-        </div>
-    </div>
-
-    <!-- RUSSELL -->
-    <div id="russell" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <div class="flex-container">
-                <div class="container-fluid"><img class="artwork shadow" src="src/artwork/russell-1.jpeg" alt=""></div>
-                <div class="container-fluid"><img class="artwork shadow" src="src/artwork/russell-2.jpeg" alt=""></div>
-                <div class="container-fluid"><img class="artwork shadow" src="src/artwork/russell-3.jpeg" alt=""></div>
-            </div>
-            <p><span class="title">Russell</span>, 2023</p>
-        </div>
-    </div>
-
-    <!-- MILADY -->
-    <div id="milady" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/milady.jpeg" alt="">
-            <p><span class="title">Milady</span>, 2022</p>
-        </div>
-    </div>
-
-    <!-- DOCK -->
-    <div id="dock" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <div class="flex-container">
-                <div class="container-fluid"><img class="artwork shadow" src="src/artwork/dock-1.jpeg" alt=""></div>
-                <div class="container-fluid"><img class="artwork shadow" src="src/artwork/dock-2.jpeg" alt=""></div>
-            </div>
-            <p><span class="title">Lake Sixteen</span>, 2020</p>
-        </div>
-    </div>
-
-    <!-- OWL -->
-    <div id="owl" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/owl.jpeg" alt="">
-            <p><span class="title">Bird of Prey</span>, 2019</p>
-        </div>
-    </div>
-
-    <!-- TEXTURE -->
-    <div id="texture" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/texture.jpeg" alt="">
-            <p><span class="title">Texture</span>, 2022<br>
-                Ink, micron pen
-            </p>
-        </div>
-    </div>
-
-    <!-- ARTIFACTS -->
-    <div id="artifacts" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/artifacts.png" alt="">
-            <p><span class="title">Artifacts</span>, 2020<br>
-                Graphite
-            </p>
-        </div>
-    </div>
-
-    <!-- CANDY -->
-    <div id="candy" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/candy.jpg" alt="">
-            <p><span class="title">Candy</span>, 2017<br>
-                Color pastel
-            </p>
-        </div>
-    </div>
-
-    <!-- GOURDS -->
-    <div id="gourds" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/gourds.jpeg" alt="">
-            <p><span class="title">Gourds</span>, 2017<br>
-                Charcoal
-            </p>
-        </div>
-    </div>
-
-    <!-- VPC -->
-    <div id="vpc" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <div class="flex-container">
-                <div class="container"><img class="artwork shadow" src="src/artwork/value.jpeg" alt=""></div>
-                <div class="container"><img class="artwork shadow" src="src/artwork/pattern.jpeg" alt=""></div>
-                <div class="container"><img class="artwork shadow" src="src/artwork/arb-color.jpeg" alt=""></div>           
-            </div>
-            <p><span class="title">Value, Pattern, Color</span>, 2021<br>
-                Gouache on vellum
-            </p>
-        </div>
-    </div>
-
-    <!-- LETTERFORMS -->
-    <div id="letterforms" class="overlay">
-        <div class="exit-button">
-            <i class="fa fa-times fa-lg close-project"></i>
-        </div>
-        <div class="art-container container">
-            <img class="artwork shadow" src="src/artwork/letterforms.jpeg" alt="">
-            <p><span class="title">Letterforms</span>, 2021<br>
-                Ink, gouache
-            </p>
-        </div>
-    </div>
 </body>
 
 <footer>

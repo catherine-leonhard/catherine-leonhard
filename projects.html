@@ -7,16 +7,17 @@
     <meta name="keywords" content="Catherine Leonhard, portfolio, graphic design, web design,photography">
     <meta name="author" content="Catherine Leonhard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Projects</title>
 
     <!-- JS -->
     <script src='scripts/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src='scripts/page.js'></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style/style.css">
     <!-- Bootstrap Core CSS ––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
     <!-- Fontawesome Icons -->
     <script src="https://kit.fontawesome.com/53deec75bf.js" crossorigin="anonymous"></script>
 </head>
@@ -40,44 +41,31 @@
 </header>
 
 <body>
-    <div id="projects" class="container-padded">
+    <div class="container-padded">
         <h1>Projects</h1>
 
         <!-- PROJECTS -->
-        <div class="row">
-            <div class="col-sm-3">
-                <div id="stamps" class="cover open-project">
-                    <img class="img-ratio-5-4" src="src/stamps_wayfinding/book-cover.jpeg" alt="STAMPS Wayfinding">
-                </div>
+        <div id="projects" class="grid-2">
+            <div class="open cover" data-id="stamps">
+                <img src="src/stamps_wayfinding/book-cover.jpeg" alt="STAMPS Wayfinding">
             </div>
-            <div class="col-sm-3">
-                <div id="matchmakers" class="cover open-project">
-                    <div class="img-container center">
-                        <img class="img-ratio-5-4" src="src/matchmakers/matchmakers-logo.png" alt="MatchMakers">
-                    </div>                
-                </div>
+            <div class="open cover" data-id="matchmakers">
+                <img src="src/matchmakers/matchmakers-logo.png" alt="MatchMakers">
             </div>
-            <div class="col-sm-3">
-                <div id="popupdocs" class="cover open-project">
-                    <div class="img-container center">
-                        <img class="img-ratio-5-4" src="src/popupdocs/PopUpDocs_cover.jpeg" alt="PopUpDocs">
-                    </div>                
-                </div>
+            <div class="open cover" data-id="popupdocs">
+                <img src="src/popupdocs/PopUpDocs_cover.jpeg" alt="PopUpDocs">
             </div>
-            <div class="col-sm-3">
-                <div id="sweatshirts" class="cover open-project">
-                    <div class="img-container center">
-                        <img class="img-ratio-5-4" src="src/sweatshirts/sweatshirts_cover.jpeg" alt="Vintage Sweatshirt Collection">
-                    </div>                
-                </div>
-            </div>
+            <!-- <div class="open cover" data-id="sweatshirts">
+                <img src="src/sweatshirts/sweatshirts_cover.jpeg" alt="Vintage Sweatshirt Collection">
+            </div> -->
         </div>
     </div>
+
 
     <!-- STAMPS WAYFINDING -->
     <div id="stamps" class="overlay">
         <div class="exit-button">
-            <i class="fa-solid fa-xmark close-project fa-xl"></i>
+            <button type="button" class="close" data-id="stamps"><i class="fa fa-times fa-lg"></i></button>
         </div>
 
         <!-- OVERVIEW -->
@@ -94,7 +82,7 @@
         <!-- SIGN EXAMPLES -->
         <div class="container-padded">
             <!-- BATHROOM SIGNS -->
-            <div class="container">
+            <!-- <div class="container">
                 <h3>Bathroom Signs</h3>
                 <div class="flex-container">
                     <div class="container-fluid text-center">
@@ -114,10 +102,10 @@
                         <p>Women</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- DOOR IDS -->
-            <div class="container">
+            <!-- <div class="container">
                 <h3>Door IDs</h3>
                 <div class="flex-container">
                     <div class="container-fluid text-center">
@@ -133,10 +121,10 @@
                         <p>Taubman Classroom</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- HANGING SIGNS -->
-            <div class="container">
+            <!-- <div class="container">
                 <h3>Hanging Signs</h3>
                 <div class="row">
                     <div class="column col-sm-6">
@@ -150,10 +138,10 @@
                         <img class="shadow full-width" src="src/stamps_wayfinding/hanging_B-back.jpg" alt="hanging sign 2 back">
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             <!-- DIRECTIONAL SIGNS -->
-            <div class="container">
+            <!-- <div class="container">
                 <h3>Directional Signs</h3>
                 <div class="flex-container">
                     <div class="container text-center">
@@ -163,10 +151,10 @@
                         <img class="shadow height-500" src="src/stamps_wayfinding/stairway_down.png" alt="directional down">
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             <!-- MAPS -->
-            <div class="container">
+            <!-- <div class="container">
                 <h3>Map</h3>
                 <div class="row">
                     <div class="column col-sm-6">
@@ -176,14 +164,14 @@
                         <img class="full-width" src="src/stamps_wayfinding/map-floor2.png" alt="floor 2">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <!-- MATCHMAKERS -->
     <div id="matchmakers" class="overlay">
         <div class="exit-button">
-            <i class="fa-solid fa-xmark close-project fa-xl"></i>
+            <button type="button" class="close" data-id="matchmakers"><i class="fa fa-times fa-lg"></i></button>
         </div>
 
         <!-- OVERVIEW -->
@@ -201,7 +189,7 @@
         </div>
 
         <!-- SCREENS -->
-        <div class="container-padded">
+        <!-- <div class="container-padded">
             <div class="flex-container">
                 <div class="container text-center">
                     <img class="height-500" src="src/matchmakers/splash-screen.png" alt="splash screen">
@@ -213,13 +201,13 @@
                     <img class="height-500" src="src/matchmakers/chat.png" alt="chat screen">
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     
     <!-- POPUPDOCS -->
     <div id="popupdocs" class="overlay">
         <div class="exit-button">
-            <i class="fa-solid fa-xmark close-project fa-xl"></i>
+            <button type="button" class="close" data-id="popupdocs"><i class="fa fa-times fa-lg"></i></button>
         </div>
 
         <!-- OVERVIEW -->
@@ -239,7 +227,7 @@
     <!-- SWEATSHIRTS -->
     <div id="sweatshirts" class="overlay">
         <div class="exit-button">
-            <i class="fa-solid fa-xmark close-project fa-xl"></i>
+            <button type="button" class="close" data-id="sweatshirts"><i class="fa fa-times fa-lg"></i></button>
         </div>
 
         <!-- OVERVIEW -->

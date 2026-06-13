@@ -33,24 +33,54 @@ $(document).ready(function () {
     }
   })
 
-  // SHOW/HIDE PROJECT OVERLAYS
-  $('.open-project').click(function() {
-    if ($("#nav-items").css('display') === 'flex') {
-      $("#nav-items").css({
-        "display": "none",
-      });    
-    }
-    project_id = $(this).attr('id');
+  // OPEN/CLOSE CAROUSEL
+  // $('.open').click(function() {
+  //   $('#art-carousel').css({
+  //     top: scroll_position + "px"
+  //   });
+  //   $('#art-carousel').show();
+  //   console.log("carousel opened")
+  // })
+
+  $('.open').click(function() {
+    $('body').css('overflow-y', 'hidden');  // disable scrolling
     scroll_position = $(window).scrollTop();
-    $("#art").addClass("no-scroll").css({
-      top: -scroll_position + "px"              // lock body in place
+
+    // Extract the parameters using jQuery's data method
+    let id = $(this).data('id');
+
+    $('#' + id).css({
+      top: scroll_position + "px"
     });
-    $('#' + project_id + '.overlay').show();
+    $('#' + id).show();
+    console.log("opened")          
+    // Pass the variables to your custom function
+  });
+
+  $('.close').click(function() {
+    $('body').css('overflow-y', 'auto');  // re-enable scrolling
+    
+    let id = $(this).data('id');
+    $('#' + id).hide();
+
+    console.log("closed")
   })
 
-  $('.close-project').click(function() {
-    $("#art").removeClass("no-scroll").css({ top: "" });
-    $(window).scrollTop(scroll_position);
-    $('#' + project_id + '.overlay').hide();
-  }) 
+  
+
+  // SHOW/HIDE PROJECT OVERLAYS
+  // $('.open-project').click(function() {
+  //   project_id = $(this).attr('id');
+  //   scroll_position = $(window).scrollTop();
+  //   $("#art").addClass("no-scroll").css({
+  //     top: -scroll_position + "px"              // lock body in place
+  //   });
+  //   $('#' + project_id + '.overlay').show();
+  // })
+
+  // $('.close-project').click(function() {
+  //   $("#art").removeClass("no-scroll").css({ top: "" });
+  //   $(window).scrollTop(scroll_position);
+  //   $('#' + project_id + '.overlay').hide();
+  // }) 
 });
