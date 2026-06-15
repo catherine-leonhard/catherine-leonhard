@@ -46,9 +46,9 @@
 
 
 body {
-    background-color:var(--bg-dark);
     font-family: var(--body-font-family);
     color: var(--body-text-color);
+    background-color: var(--bg-dark);
     overflow: auto;
 }
 
@@ -99,9 +99,7 @@ h3 {
         radial-gradient(circle at 0% 100%, #05174d, transparent 100%),
         radial-gradient(circle at 100% 100%, black, transparent 80%),
         radial-gradient(circle, #105a75);
-    color: white;
 }
-
 
 /* CONTAINERS */
 .container-padded {
@@ -143,19 +141,19 @@ h3 {
 
 .grid-2 {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
 }
 
 .grid-3 {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
 }
 
 .grid-4 {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 
@@ -346,7 +344,6 @@ hr.thin {
 /* Add a color to the active/current link */
 #nav-items a.active {
     background-color: #ffffff33;
-    color: white;
 }
 
 
@@ -389,7 +386,6 @@ footer p {
 /* splash screen */
 #splash {
     color: white;
-    cursor: pointer;
     position: fixed;
     z-index: 999;
     display: flex;
@@ -501,10 +497,6 @@ footer p {
 }
 
 /* PROJECTS */
-#projects {
-    gap: 2rem;
-}
-
 .overlay {
     width: 100vw;
     min-height: 100vh;
@@ -518,25 +510,26 @@ footer p {
 }
 
 /* ARTWORK */
-#gallery {
+.gallery {
     width: 100%;
+}
+
+.gallery-row {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    margin-bottom: 16px;
+    gap: 16px;
 }
 
-#gallery img {
-    max-height: 300px;
-    width: auto;
-    margin: 0;
+.gallery-row img {
+    display: block;
+    flex-shrink: 0;
 }
 
-/* #gallery img:hover {
+.gallery-row img:hover {
     cursor: pointer;
-    opacity: 0.8;
-    box-shadow: 0 0 5px 5px var(--accent-2);
     transition: all 0.3s ease-in-out;
-} */
+    opacity: 0.75;
+}
 
 /* carousel*/
 #art-carousel {
@@ -560,7 +553,7 @@ footer p {
 }
 
 button.indicator {
-    min-width: 50px;
+    width: 25px;
     height: 3px;
     background-color: white;
     opacity: 0.5;
@@ -623,15 +616,13 @@ button.carousel-control-next:hover {
 
 .carousel-caption {
     position: static;
-    right: 0;
-    left: 0;
-    bottom: 0;
     padding-top: 2rem;
     padding-bottom: 0;
+    text-align: left;
 }
 
-.carousel-caption * {
-    color: white;
+.carousel-caption p {
+    font-style: italic;
 }
 
 /* tablet */
@@ -699,12 +690,7 @@ button.carousel-control-next:hover {
 /*mobile*/
 @media only screen and (max-width: 480px) {
     body {
-        background-color:var(--bg);
-        font-family: var(--body-font-family);
-        font-size: 1rem;
-        /*    line-height is 150% of the font size*/
-        line-height: 1.5rem;
-        color: var(--body-text-color);
+        font-size: 14px;
     }
     
     p {
