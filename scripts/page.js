@@ -119,23 +119,33 @@ $(window).on('resize', function () {
 
 // OPEN CAROUSEL & OVERLAYS
 $(document).on('click', '.open', function() {
-  $('body').css('overflow-y', 'hidden');  // disable scrolling
-  scroll_position = $(window).scrollTop();
+  const scrollY = window.scrollY;
+
+  $('body').css({
+    position: 'fixed',
+    top: `-${scrollY}px`,
+    width: '100%'
+  });
 
   // Extract the parameters using jQuery's data method
   let id = $(this).data('id');
 
-  $('#' + id).css({
-    top: scroll_position + "px"
-  });
   $('#' + id).show();
   console.log("opened")
 });
 
 // CLOSE CAROUSEL & OVERLAYS
 $(document).on('click', '.close', function() {
-  $('body').css('overflow-y', 'auto');  // re-enable scrolling
-  
+  const scrollY = Math.abs(parseInt($('body').css('top')) || 0);
+
+  $('body').css({
+    position: '',
+    top: '',
+    width: ''
+  });
+
+  window.scrollTo(0, scrollY);
+
   let id = $(this).data('id');
   $('#' + id).hide();
 

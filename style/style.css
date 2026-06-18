@@ -469,12 +469,11 @@ footer p {
 
 /* carousel*/
 #art-carousel {
-    width: 100vw;
-    height: 100vh;
     background-color: var(--bg-light);
-    position: absolute;
-    top: 0;
-    right: 0;
+    width: 100vw;
+    height: 100dvh; /* dynamic viewport height */
+    position: fixed;
+    inset: 0;
     z-index: 999;
     display: none;
 }
@@ -810,16 +809,27 @@ button.carousel-control-next:hover {
     }
 
     /* ARTWORK */
+    .exit-button {
+        top: 25px;
+        right: 25px;
+    }
+
+    .carousel-indicators {
+        gap: 0.5rem;
+    }
+
     .carousel-inner {
         padding: 6rem 2rem;
     }
 
     .carousel-img {
         flex-direction: column;
-        height: 90%;
+        height: 85%;
     }
 
-    .carousel-img div {
-        max-height: 175px;
+    .carousel-img > div {
+        flex: 1 1 0;
+        min-height: 0;
     }
+
 }
