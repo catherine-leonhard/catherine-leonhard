@@ -117,39 +117,65 @@ $(window).on('resize', function () {
 });
 
 
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+function getScrollbarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
+}
+
+function preventBodyTouch(e) {
+  if (!e.target.closest('#overlay')) {
+    e.preventDefault();
+  }
+}
+
 // OPEN CAROUSEL & OVERLAYS
-$(document).on('click', '.open', function() {
-  const scrollY = window.scrollY;
+$(document).on('click', '.open', function(e) {
+  e.preventDefault(); // stop <a href="#"> from jumping to top
 
-  $('body').css({
-    position: 'fixed',
-    top: `-${scrollY}px`,
-    width: '100%'
-  });
+  if (isIOS()) {
+    const scrollY = window.scrollY;
+    $('body')
+      .data('scrollY', scrollY)
+      .css({
+        position: 'fixed',
+        top: `-${scrollY}px`,
+        width: '100%'
+      });
+  } 
+  else {
+    const scrollbarWidth = getScrollbarWidth();
+    $('html, body').css({ overflow: 'hidden' });
+    $('body').css('padding-right', scrollbarWidth);
+  }
 
-  // Extract the parameters using jQuery's data method
   let id = $(this).data('id');
-
   $('#' + id).show();
-  console.log("opened")
+
+  console.log("opened");
 });
 
 // CLOSE CAROUSEL & OVERLAYS
 $(document).on('click', '.close', function() {
-  const scrollY = Math.abs(parseInt($('body').css('top')) || 0);
-
-  $('body').css({
-    position: '',
-    top: '',
-    width: ''
-  });
-
-  window.scrollTo(0, scrollY);
-
   let id = $(this).data('id');
-  $('#' + id).hide();
+  $('#' + id).hide(); // hide overlay first to avoid visible jump
 
-  console.log("closed")
+  if (isIOS()) {
+    const scrollY = $('body').data('scrollY') || 0;
+    $('body').css({
+      position: '',
+      top: '',
+      width: ''
+    });
+    window.scrollTo(0, scrollY);
+  }
+  else {
+    $('html, body').css({ overflow: '' });
+    $('body').css('padding-right', '');
+  }
+
+  console.log("closed");
 });
-
-
