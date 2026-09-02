@@ -7,7 +7,7 @@
     <meta name="keywords" content="Catherine Leonhard, portfolio, graphic design, web design,photography">
     <meta name="author" content="Catherine Leonhard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Catherine Leonhard</title>
 
     <!-- JS -->
     <script src='scripts/jquery.min.js'></script>
@@ -20,116 +20,326 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <!-- Fontawesome Icons -->
     <script src="https://kit.fontawesome.com/53deec75bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <header>
-    <div id="intro" class="gradient container-fluid">
-        <div class="top-menu">
-            <a id="name" href="index.html">Catherine Leonhard</a>
+    <div id="top-menu">
+        <img class="logo top" src="src/logo-black.png">
 
-            <div id="top-nav">
-                <a href="javascript:void(0);" class="icon">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <div id="nav-items">
-                    <a class="active" href="index.html">Home</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="artwork.html">Artwork</a>
-                </div>
+        <i class="menu-icon fa fa-bars open" data-id="top-nav"></i>
+
+        <div id="top-nav">
+            <i class="close-icon fa fa-close" data-id="top-nav"></i>
+
+            <div class="nav-items">
+                <a href="#about">About</a>
+                <a href="#marketing">Marketing</a>
+                <a href="#projects">Projects</a>
+                <a href="#artwork">Artwork</a>
             </div>
         </div>
-
-        <div class="intro-content">
-            <div class="intro-words">
-                <h1>DIGITAL <br> DESIGNER</h1>
-                <h2>Think. Create. Repeat.</h2>
-            </div>
-            <div class="headshot">
-                <img src="src/headshot.jpeg" alt="">
-            </div>
-        </div>
-
-        <a href="#about">About Me<i class="fa-solid fa-angle-down close-project"></i></a>
     </div>
+
 </header>
 
-
 <body>
-    <!-- SPLASH SCREEN -->
-    <div id="splash" class="gradient">
-        <div class="splash-content">
-            <h1>Hello! I'm Catherine.</h1>
-            <p>Welcome to my portfolio!</p>
+    <!-- TOP BUTTON -->
+    <button class="top-btn top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- INTRO -->
+    <div id="intro" class="container-contained">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h1>IDEATE.<br>CREATE.<br>REPEAT.</h1>
+            </div>
+
+            <div>
+                <img class="img-5-7 intro-img" src="src/ny-portrait.jpg" alt-text="Photographer in a black leather coat captures a lively city street, with pedestrians, cars, fire escapes, and colorful storefronts behind her.">
+            </div>
         </div>
     </div>
 
     <!-- ABOUT -->
-    <div id="about" class="hero-container container-padded">
-        <div class="about-img">
-            <img src="src/ny-portrait.jpg" alt="">
-        </div>
+    <div class="bg-dark container-fluid ">
+        <div id="about" class="container-contained">
+            <div class="about-content">
+                <div><img class="img-5-7 headshot" src="src/headshot.jpeg" alt="Catherine Leonhard"></div>
 
-        <div class="about-section container-padded-min">
-            <h1>Who Am I?</h1>
-            <p>
-                I am a graphic and digital marketing designer currently based in Auburn Hills, MI. I 
-                completed my Bachelor's of Fine Arts and minor in Computer Science from the 
-                University of Michigan with a concentration in graphic and web design. I work as a 
-                Marketing and Communications Assistant at the Michigan Institute for Data & AI in 
-                Society where I maintain, design, and launch the institute's websites and webpages, 
-                create print and digital marketing materials, and assist with our various events. I'm 
-                passionate about all things design and am always looking to expand my skills and 
-                knowledge to execute creative and innovative solutions.
-            </p>
-        </div>
+                <div class="bio">
+                    <h2>Hello! I'm Catherine.</h2>
+                    <p>
+                        I am a graphic designer focused on marketing and communications. I recieved 
+                        my Bacheloer's of Fine Arts in Art & Design and minor in Computer Science 
+                        from the University of Michigan. My goal as a designer is to help companies 
+                        enhance their marketing initiatives through design.
+                    </p>
 
-        
-        <div id="connect"class="flex-container">
-            <div class="about-section container-padded-min">
-                <h1>Fun Facts!</h1>
-                
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-code"></i></span>I coded this website (mostly) myself!</li>
-                    <li><span class="fa-li"><i class="fas fa-running"></i></span>I run and pole vault in my spare time</li>
-                    <li><span class="fa-li"><i class="fas fa-paw"></i></span>I love taking <a href="#" class="open" data-id="squirrels">squirrel pictures</a></li>
-                </ul>
-            </div>
+                    <div class="spacer"></div>
 
-            <div class="about-section container-padded-min">
-                <h2>Let's Connect!</h2>
-                <p>Feel free to send me an email at
-                    <a href="mailto:catherinerleonhard@gmail.com">catherinerleonhard@gmail.com</a>.
-                </p>
-                <div class="center">
-                    <a href="src/Leonhard_Master.pdf" target="_blank"><button>VIEW RESUME</button></a>
+                    <h3>Let's Connect!</h3>
+
+                    <a href="mailto:catherinerleonhard@gmail.com"><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/catherine-leonhard/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="src/Leonhard_Master.pdf" target="_blank" rel="noopener noreferrer"><button class="btn-light">Resume &nbsp;<i class="fa fa-download"></i></button></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="squirrels">
-        <div class="exit-button flex-container">
-            <button type="button" class="close" data-id="squirrels"><i class="fa fa-times fa-lg"></i></button>
+    <!-- MARKETING -->
+    <div id="marketing" class="container-contained">
+        <h1>Marketing</h1>
+
+        <div class="grid-50-50">
+            <div class="work-item">
+                <img class="open" src="src/marketing/midas-logo.png" alt="" data-id="midas">
+                
+                <p><strong>Michigan Institute for Data & AI in Society (MIDAS)</strong> | Sep 2023 - Aug 2026</p>
+            </div>
+
+            <div class="work-item">
+                <img class="open" src="src/marketing/lspedia-logo.png" alt="" data-id="lspedia">
+                
+                <p><strong>LSPedia</strong> | Aug 2025 - Oct 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="midas" class="overlay">
+        <i class="close-icon fa fa-close" data-id="midas"></i>
+
+        <div class="section overview">
+            <div class="project-overview">
+                <h1>Michigan Institute for Data & AI in Society (MIDAS)</h1>
+                <p>
+                    Based at the University of Michigan-Ann Arbor, MIDAS is a university-wide organization 
+                    advancing the world of Data Science and Artificial Intelligence (AI). As a Marketing
+                    and Communications Assistant I create print and digital marketing materials, manage
+                    and design landing pages, and provide on-site event support.
+                </p>
+            </div>
+
+            <div class="project-img"><img src="src/marketing/midas-stacked.png" alt=""></div>
         </div>
 
-        <div class="squirrel-inner flex-container">
-            <div class="squirrel-imgs">
-                <div class="center"><img src="src/squirrel-1.jpeg" alt="" class="d-block"></div>
-                <div class="center"><img src="src/squirrel-2.jpg" alt="" class="d-block" style="object-position: top;"></div>
-                <div class="center"><img src="src/squirrel-3.jpeg" alt="" class="d-block"></div>
+        <div class="section">
+            <div class="project-overview">
+                <h2>MIDAS Stickers</h2>
+                <p>
+                    These stickers were made for U-M's 2026 Festifall, an event for institutions
+                    and student organizations to gain student interest.
+                </p>
+            </div>
+
+            <div class="project-img">
+                <div class="stickers">
+                    <img src="src/marketing/MIDAS_Logo-Sticker.png" alt="">
+                    <img src="src/marketing/MIDAS_Robot-Sticker.png" alt="">
+                    <img src="src/marketing/MIDAS_Squirrel-Sticker.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="project-overview">
+                <h2>AI Journeys</h2>
+                <p>
+                    During the MIDAS AI in Research Symposium, University of Michigan researchers presented their 
+                    journey of how they have used AI within their research process. Centered around MIDAS's 
+                    Research Lifecycle, these talks were collected and organized into their respective phase, 
+                    with many talks represented in multiple phases. For this project, I led the design and 
+                    creation of the publication and landing pages. 
+                </p>
+            </div>
+
+            <div class="project-img">
+                <div class="journeys">
+                    <a href="src/marketing/MIDAS_2026_AI-Journeys[PRINT].pdf" target="_blank"><img src="src/marketing/MIDAS_2026_AI-Journeys-cover.png" alt=""></a>
+                    <a href="https://midas.umich.edu/research/ai-sandbox/ai-journeys/2026-journeys/" target="_blank"><img src="src/marketing/MIDAS_AI-Journeys-webpage.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="project-overview">
+                <h2>AI Digest</h2>
+                <p>
+                    The AI Digest is a way for people to keep up on the latest AI updates. I created
+                    the email template for this digest using Canva email templates.
+                </p>
+            </div>
+
+            <div class="project-img"><a href="https://midas.umich.edu/news/ai-digest/" target="_blank"><img class="highlights" src="src/marketing/MIDAS_AI_Digest.png" alt=""></a></div>
+        </div>
+
+        <div class="section">
+            <div class="project-overview">
+                <h2>Summer Academy Virtual Badges</h2>
+                <p>
+                    MIDAS holds summer academies for researchers, faculty, and students. These virtual 
+                    badges are provided upon completion of the academy.
+                </p>
+            </div>
+
+            <div class="project-img">
+                <div class="badges">
+                    <img src="src/marketing/MIDAS_ASE-badge.png" alt="">
+                    <img src="src/marketing/MIDAS_BDS-badge.png" alt="">
+                    <img src="src/marketing/MIDAS_DAIR3-badge.png" alt="">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="project-overview">
+                <h2>2025 Annual Highlights Report</h2>
+                <p>
+                    I had the opportunity to design MIDAS's 2025 Annual Highlights booklet. The goal 
+                    for this publication was to give our annual highlights a fresh look while maintaining 
+                    brand consistency through typography, hierarchy, and color.
+                </p>
+            </div>
+
+            <div class="project-img"><a class="highlights" href="src/marketing/MIDAS_2025_Annual-Highlights_v3.0-LINKED.pdf" target="_blank"><img class="highlights" src="src/marketing/MIDAS_2025_Annual-Highlights-cover.png" alt=""></a></div>
+        </div>
+    </div>
+
+    <div id="lspedia" class="overlay">
+        <i class="close-icon fa fa-close" data-id="lspedia"></i>
+        
+        <div class="section overview">
+            <div class="project-overview">
+                <h1>LSPedia</h1>
+                <p>
+                    A leading company in DSCSA compliance and serialization. As a Graphic Design intern 
+                    I created internal and external marketing materials including digital ads, case 
+                    studies, slide decks, and social media graphics.
+                </p>
+            </div>
+
+            <div class="project-img">
+                <img src="src/marketing/lspedia-light.png" alt="">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="project-overview">
+                <h2>Bahrain Case Study</h2>
+                <p>
+                    I designed a case study for LSPedia's website to highlight their work with a 
+                    pharmaceutical company. The goal of this case study was to showcase the 
+                    company's expertise and experience in the field of serialization and 
+                    compliance.
+                </p>
+            </div>
+
+            <div class="project-img">
+                <a href="src/marketing/LSP_Case-Study_v2.1.pdf" target="_blank"><img src="src/marketing/LSP_Case-Study-cover.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="project-overview">
+                <h2>CEO Newsletter</h2>
+                <p>
+                    I designed a newsletter for LSPedia's CEO to send to clients and partners. 
+                </p>
+            </div>
+
+            <div class="project-img">
+                <a href="src/marketing/LSP_CEO-Newsletter_v1.0.pdf" target="_blank"><img src="src/marketing/LSP_CEO-Newsletter-cover.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="project-overview">
+                <h2>Display Ads</h2>
+                <p>
+                    This was a series of display ads for LSPedia's digital marketing campaigns. 
+                </p>
+            </div>
+
+            <div class="project-img">
+                <img src="src/marketing/LSP_Display-Ads.png" alt="Display Ads">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="container-contained">
+        <h1>Projects</h1>
+
+        <div class="grid-50-50">
+            <div class="work-item">
+                <a href="src/projects/Leonhard_STAMPS_Wayfinding.pdf" target="_blank"><img src="src/projects/stamps-logo.png" alt="" data-id="stamps"></a>
+                
+                <p><strong>STAMPS Wayfinding</strong> | 2025</p>
+                <p>
+                    For this project, I was tasked with redesigning the wayfinding system for the 
+                    Penny W. Stamps School of Art & Design at the University of Michigan. A key 
+                    focus of the project was developing a cohesive solution that effectively 
+                    integrated both STAMPS and the Taubman College of Architecture, which share the 
+                    same building.
+                </p>
+            </div>
+
+            <div class="work-item">
+                <a href="https://www.figma.com/proto/0b6e6fMpyfgLSbALUMBC89/EECS-493-%7C-Match-Makers-M3?node-id=44-1803&p=f&t=68qbgfRf3yVjYcCn-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=44%3A1803" target="_blank"><img src="src/projects/matchmakers-logo.png" alt="" data-id="matchmakers"></a>
+
+                <p><strong>MatchMakers</strong> | 2025</p>
+                <p>
+                    As the capstone project for a user interface development class, my group created 
+                    a prototype for a roommate matching app designed to help undergraduate students 
+                    find compatible roommates based on their habits, schedules, and personal 
+                    preferences. During the iterative process our group utilized user-centered 
+                    design strategies such as storyboarding, affinity diagrams, think aloud 
+                    protocols, and thorough user testing.
+                </p>
+            </div>
+
+            <div class="work-item">
+                <a href="src/projects/PopUpDocs_Style_Guide.pdf" target="_blank"><img src="src/projects/popupdocs-logo.png" alt="" data-id="popupdocs"></a>
+
+                <p><strong>PopUpDocs</strong> | 2022</p>
+                <p>
+                    As the core project for Visual Identity and Branding, we were tasked with 
+                    designing the branding for PopUpDocs, a mobile documentary workshop aimed to 
+                    help underprivileged children in Detroit explore the world of filmmaking. During 
+                    the semester we had individual and group meetings with the client and our 
+                    professor to help develop our ideas.
+                </p>
             </div>
         </div>
     </div>
 
 
+    <!-- ARTWORK -->
+    <!-- <div id="artwork" class="container-contained">
+        <h1>Artwork</h1>
+        <p>Check back soon!</p>
+
+        <div class="gallery">
+            <div class="slide">
+                <img class="art-item" src="src/artwork/capsize.jpeg">
+                <p>[Caption]</p>
+            </div>
+            <div class="slide">
+                <img class="art-item" src="src/artwork/naias.jpeg">
+                <p>[Caption]</p>
+            </div>
+            <div class="slide">
+                <img class="art-item" src="src/artwork/owl.jpeg">
+                <p>[Caption]</p>
+            </div>
+        </div>
+    </div> -->
 </body>
 
 <footer>
-    <div class="gradient footer-content">
-        <div class="social">
-            <a href="mailto:catherinerleonhard@gmail.com"><i class="fa-solid fa-envelope fa-xl"></i></a>
-            <a href="https://www.linkedin.com/in/catherine-leonhard/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-        </div>
+    <div id="footer-content">
         <p class="footer-text">Copyright © 2026 Catherine Leonhard. All rights reserved.</p>
     </div>
 </footer>
